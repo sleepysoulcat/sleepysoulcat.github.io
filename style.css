@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+body {
+  background-color: #131313;
+  font-family: "Space Mono", monospace;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #010101;
+  }
+}
+
+div {
+  position: absolute;
+  background: #010101;
+  border-radius: 10px;
+  width: 600px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 600px) {
+  div {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+}
+
+
+
+pre {
+ position: absolute;
+ font-size: 8px;
+}
+
+
+info {
+  right: 0px;
+  position: absolute;
+  width: 42%;
+  height: 400px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  info {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    width: 100%;
+    font-size: 20px;
+    
+  }
+}
+
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+b {
+  color: #139CB7ff;
+}
+
+white {
+  background: #ffffff;
+  width: 25px;
+  height: 25px;
+}
+
+blue {
+  width: 25px;
+  height: 25px;
+  background: #139CB7ff;
+}
+
+colorpalate {
+  display: flex;
+  position: absolute;
+  width: 125px;
+  height: 25px;
+  left: 40px;
+}
