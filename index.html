@@ -1,55 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://www.googleapis.com; connect-src 'self' https://firestore.googleapis.com https://www.googleapis.com https://*.googleapis.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data: https://*.googleusercontent.com; font-src 'self' https://fonts.gstatic.com;">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>sleepysoulcat</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png"/>
 </head>
-<body>
-    <div>
+<body id="pagina">
+    <div class="container">
+      <div id="firstcommand" class="icommand">
+        <span>sleepysoulcat@index:~$</span>
+        <input autocomplete="off" maxlength="20" type="text" class="inputst" id="first-input" autofocus/>
+      </div>
+      <div class="topbar">
+        <div class="righticons">
+          <svg
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path d="M5 17H19V20H5V17Z" fill="currentColor" />
+          </svg>
+          <svg
+  width="18"
+  height="18"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+    fill="currentColor"
+  />
+</svg>
+          
+        </div>
+        <span><b>sleepysoulcat@index.html:~</b></span>
+        <div class="lefticons">
+          <svg
+  width="22"
+  height="22"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z"
+    fill="currentColor"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z"
+    fill="currentColor"
+  />
+</svg>
+<svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z"
+    fill="currentColor"
+  />
+  <path
+    d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z"
+    fill="currentColor"
+  />
+  <path
+    d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z"
+    fill="currentColor"
+  />
+</svg>
+
+        </div>
+      </div>
+      <div id="cont-1" class="content">
      <pre>
-                                                             .:                             
-                                                           -*+-*+                           
-                 :--:.                                   =#-    =#.                         
-                =#::-=*+-                              =#-       +*                         
-                *+      -*+:              ..::::..   :#=          #-                        
-                +*        .=*-     .:=+***+*%%%%%%%%#%*:.         +*                        
-                :%.          =#=:=#*=:.    #%%%%%%%%%%%%%#+-      :%.                       
-                 *=          .+#=:        .%%%%%%%%%%%%%%%%%%+:    %-                       
-                 :%.       .*#=           :%%%%%%%%%%%%%%%%%%%%*:  *+                       
-                  ++      +%+.            :%%%%%%%%%%%%#**#%%%%%%*.++                       
-                   #-   :##:               #%%%%%%%%*:.----.:+%%%%%#*                       
-                   :%: =%+    .:.          =%%%%%%%-.*%%%%%%*:=%%%%%#                       
-                    -#=%+   .*%%%#+.        #%%%%%+ *%%%%%%%%%%%%%%%%+                      
-                     *%*    *%%%%%+         .#%%%%#*%%%%%%%%%%%%%%%%%%=                     
-                     #%.    #%%%%+           .*%%%%%%%%%%%%%%%%%%%%%%%%.                    
-                    =%+     =%%%%%%#+:         -#%%%%%%%%%%%%%%%%%%%%%%+  .+*               
-                    #%:      +%%%%%%%:           =#%%%%%%%%%%%%%%%%%%%%%.+#-                
-                   .%%        -*%%%#-              :+#%%%%%%%%%%%%%%%**%#-                  
-                   .%#           ..                :  .:=++*****++-:.=#%:                   
-                   .%%                      +*-::=#%+        :=    -#=-%:                   
-                    #%:                     #%%%%%%%#         *     ..+%::::::-             
-               .::::+%*:            -       :#%%%%%#.         *      =%*-----==.            
-               .-----#%+.           +:        :-=#*          =-    .**%.                    
-                     :%#:=.          +-         +:.=-.    .-=.      :%**=:                  
-                     :*%%-            .=-::.:-=-     :----:        .#+  :+#+-.              
-                  :+*=:-%#-=              ..                      :#=      :+#:             
-                 ==.    .#%+                                     =#-                        
-                        :#+%*:                                 -#+.                         
-                        :#: .+%*:                             -#*:                           
-                       .#:     =##+:                      .-+#=.                             
-                                 .=*#*=-.             :-+#*=:                                
-                                     .-=+*##***+***##*+-:                                    
-                                             ....                                            
-                                                                                               
-                                                                                               
-                                                                                               
-                                                                                               
-     </pre>
-       <info>
+                                              .:                 
+                                            -*+-*+               
+  :--:.                                   =#-    =#.             
+ =#::-=*+-                              =#-       +*             
+ *+      -*+:              ..::::..   :#=          #-            
+ +*        .=*-     .:=+***+*%%%%%%%%#%*:.         +*            
+ :%.          =#=:=#*=:.    #%%%%%%%%%%%%%#+-      :%.           
+  *=          .+#=:        .%%%%%%%%%%%%%%%%%%+:    %-           
+  :%.       .*#=           :%%%%%%%%%%%%%%%%%%%%*:  *+           
+   ++      +%+.            :%%%%%%%%%%%%#**#%%%%%%*.++           
+    #-   :##:               #%%%%%%%%*:.----.:+%%%%%#*           
+    :%: =%+    .:.          =%%%%%%%-.*%%%%%%*:=%%%%%#           
+     -#=%+   .*%%%#+.        #%%%%%+ *%%%%%%%%%%%%%%%%+          
+      *%*    *%%%%%+         .#%%%%#*%%%%%%%%%%%%%%%%%%=         
+      #%.    #%%%%+           .*%%%%%%%%%%%%%%%%%%%%%%%%.        
+     =%+     =%%%%%%#+:         -#%%%%%%%%%%%%%%%%%%%%%%+  .+*   
+     #%:      +%%%%%%%:           =#%%%%%%%%%%%%%%%%%%%%%.+#-    
+    .%%        -*%%%#-              :+#%%%%%%%%%%%%%%%**%#-      
+    .%#           ..                :  .:=++*****++-:.=#%:       
+    .%%                      +*-::=#%+        :=    -#=-%:       
+     #%:                     #%%%%%%%#         *     ..+%::::::- 
+.::::+%*:            -       :#%%%%%#.         *      =%*-----==.
+.-----#%+.           +:        :-=#*          =-    .**%.        
+      :%#:=.          +-         +:.=-.    .-=.      :%**=:      
+      :*%%-            .=-::.:-=-     :----:        .#+  :+#+-.  
+   :+*=:-%#-=              ..                      :#=      :+#: 
+  ==.    .#%+                                     =#-            
+         :#+%*:                                 -#+.             
+         :#: .+%*:                             -#*:              
+        .#:     =##+:                      .-+#=.                
+                  .=*#*=-.             :-+#*=:                   
+                      .-=+*##***+***##*+-:                       
+                              ....                               </pre>
+       <div class="info">
          <ol>
-           <li><b>sleepysoulcat@infopage</b></li>
+           <li><b>sleepysoulcat@index.html</b></li>
            <span>-----------------------</span>
            <li><b>Name:</b> Sol</li>
            <li><b>Location:</b> Milky Way</li>
@@ -61,11 +130,33 @@
            <li><b>Ig:</b><a href="https://instagram.com/miitstake"> @miitstake</a></li>
            <li><b>Github:</b> <a href="https://github.com/sleepysoulcat">/sleepysoulcat</a></li>
          </ol>
-         <colorpalate>
+         <div class="colorpalate">
            <white></white>
            <blue></blue>
-         </colorpalate>
-       </info>
-     </div>
+         </div>
+       </div>
+       
+      </div>
+      <div id="cont-2" class="content2">
+        <div id="output" class="terminal-output"></div>
+
+        <span>sleepysoulcat@index:~$</span>
+        <input autocomplete="off" maxlength="20" type="text" class="inputst" id="input" autofocus/>
+      </div>
+      <div id="guestbook">
+        <div id="gb-cont"></div>
+        <form id="guestbook-form" class="gb-input">
+        <label for="gb-name"><b>name:</b></label>
+        <input autocomplete="off" maxlength="15" type="text" id="gb-name" autofocus/>
+        <label for="gb-message"><b>message:</b></label>
+        <input autocomplete="off" maxlength="200" type="text" id="gb-message" autofocus/>
+        <button type="submit"></button>
+      </form>
+      </div>
+
+      </div>
+
+     <script src="script.js"></script>
+     <script type="module" src="guestbook.js"></script>
 </body>
 </html>
