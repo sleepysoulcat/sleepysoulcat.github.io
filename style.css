@@ -8,55 +8,90 @@ body {
   color: white;
 }
 
+
 @media screen and (max-width: 600px) {
   body {
     background-color: #010101;
   }
 }
 
-div {
+.container {
   position: absolute;
-  background: #010101;
+  background: #1f1f1f;
   border-radius: 10px;
   width: 600px;
   height: 400px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }
-
+  
 @media screen and (max-width: 600px) {
-  div {
+  .container {
+    background-color: #010101;
     width: 100%;
     height: 100%;
     border-radius: 0px;
+    overflow-y: hidden;
   }
 }
+
+.icommand {
+  position: absolute;
+  width: 90%;
+  left: 10px;
+  height: 25px;
+  bottom: 0px;
+}
+
+
+
+.icommand span {
+  font-size: 12px;
+}
+
+.inputst {  
+  background: transparent;
+  border: none;
+  color: white;
+  width: 300px;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  outline: none;
+}
+
 
 
 
 pre {
  position: absolute;
  font-size: 8px;
+ left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  pre {
+    visibility: hidden;
+  }
 }
 
 
-info {
+.info {
   right: 0px;
   position: absolute;
-  width: 42%;
-  height: 400px;
+  width: 50%;
+  height: 360px;
   font-size: 12px;
 }
 
 @media screen and (max-width: 600px) {
-  info {
+  .info {
     position: absolute;
-    bottom: 0px;
-    left: 30px;
+    top: 0px;
+    left: 0px;
     width: 100%;
     font-size: 20px;
-    
   }
 }
 
@@ -74,7 +109,7 @@ a:hover {
   text-decoration: underline;
 }
 
-b {
+.info b {
   color: #139CB7ff;
 }
 
@@ -90,10 +125,151 @@ blue {
   background: #139CB7ff;
 }
 
-colorpalate {
+.colorpalate {
   display: flex;
   position: absolute;
   width: 125px;
   height: 25px;
   left: 40px;
+}
+
+.topbar {
+  position: absolute;
+  background-color: #303030;
+  width: 100%;
+  height: 10%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media screen and (max-width: 600px){
+  .topbar {
+    visibility: hidden;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    height: 40px;
+  }
+
+  .topbar span {
+    visibility: hidden;
+  }
+
+}
+
+
+
+
+.content {
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+
+.content2 {
+  font-size: 12px;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0px;
+  height: 90%;
+  width: 95%;
+  margin-left: 10px;
+}
+
+.righticons {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+
+}
+
+.topbar span {
+  position: absolute;
+  top: 8px;
+  left: 25%;
+}
+
+.lefticons {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+#guestbook {
+  visibility: hidden;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0px;
+  height: 90%;
+  width: 97%;
+  margin-left: 10px;
+}
+
+#gb-cont {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+  overflow:auto;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 600px){
+  #gb-cont {
+    height: 90%;
+  }
+}
+
+
+.gb-input {
+  position: absolute;
+  bottom: 10px;
+}
+
+#gb-name {
+  background: transparent;
+  color: white;
+  border: none;
+  width: 80px;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+@media screen and (max-width: 600px){
+  #gb-name {
+    width: 98%;
+  }
+}
+
+#gb-message {
+  background: transparent;
+  color: white;
+  border: none;
+  width: 330px;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+@media screen and (max-width: 600px){
+  #gb-message {
+    width: 98%;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.80);
+  border-radius: 10px;
+ }
+
+.gb-input button {
+  visibility: hidden;
+  width: 0px;
 }
