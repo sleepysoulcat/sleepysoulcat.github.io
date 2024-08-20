@@ -211,6 +211,7 @@ blue {
   height: 320px;
   overflow:auto;
   word-break: break-all;
+  flex-direction: column-reverse;
 }
 
 @media screen and (max-width: 600px){
