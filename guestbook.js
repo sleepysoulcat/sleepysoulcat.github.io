@@ -36,7 +36,7 @@
       function loadEntries() {
           const q = query(collection(db, "messages"), orderBy("timestamp", "asc"));
           onSnapshot(q, (snapshot) => {
-              const entriesDiv = document.getElementById('gb-cont');
+              const entriesDiv = document.getElementById('gbcont');
               entriesDiv.innerHTML = ''; // Limpa as mensagens existentes
 
               snapshot.forEach((doc) => {
@@ -61,7 +61,9 @@
           entryDiv.appendChild(nameElement);
           entryDiv.appendChild(messageElement);
           
-          document.getElementById('gb-cont').appendChild(entryDiv);
+          document.getElementById('gbcont').appendChild(entryDiv);
+
+          gbcont.scrollTop = gbcont.scrollHeight;
       }
 
       document.addEventListener('DOMContentLoaded', loadEntries);
