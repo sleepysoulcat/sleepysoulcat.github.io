@@ -100,6 +100,8 @@ li {
   list-style-type: none;
 }
 
+
+
 a {
   text-decoration: none;
   color: white;
@@ -113,22 +115,62 @@ a:hover {
   color: #139CB7ff;
 }
 
-white {
-  background: #ffffff;
-  width: 25px;
-  height: 25px;
-}
 
-blue {
+
+
+black{
+    width: 25px;
+  height: 25px;
+  background: #000000;
+
+}
+red{
+    width: 25px;
+  height: 25px;
+  background: #C51E14;
+
+}
+green{
+    width: 25px;
+  height: 25px;
+  background: #1AC121;
+
+}
+yellow{
+    width: 25px;
+  height: 25px;
+  background: #C6C42A;
+
+}
+blue{
+    width: 25px;
+  height: 25px;
+  background: #0930C4;
+
+}
+purple{
+    width: 25px;
+  height: 25px;
+  background: #C839C5;
+
+}
+bluezinho{
+    width: 25px;
+  height: 25px;
+  background: #21C5C6;
+
+}
+white{
   width: 25px;
   height: 25px;
-  background: #139CB7ff;
+  background: #C7C7C7;
+
 }
 
 .colorpalate {
   display: flex;
   position: absolute;
-  width: 125px;
+  width: auto;
   height: 25px;
   left: 40px;
 }
@@ -205,17 +247,17 @@ blue {
   margin-left: 10px;
 }
 
-#gb-cont {
+#gbcont {
+  overflow-y: auto;
   position: absolute;
   width: 100%;
   height: 320px;
-  overflow:auto;
   word-break: break-all;
   flex-direction: column-reverse;
 }
 
 @media screen and (max-width: 600px){
-  #gb-cont {
+  #gbcont {
     height: 80%;
   }
 }
