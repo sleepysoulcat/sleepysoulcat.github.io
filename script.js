@@ -47,9 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //foco no nome DO GUESTBOOK
     gbname.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            const negociodacor = {
-                cor: '#139CB7',
-            }; inputdecorzinha.value = negociodacor.cor;
             gbmessage.focus();
         }
 
