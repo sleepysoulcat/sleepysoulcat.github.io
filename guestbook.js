@@ -19,11 +19,12 @@
       const db = getFirestore(app);
 
       // Função para salvar mensagens
-      async function saveEntry(name, message) {
+      async function saveEntry(name, message, color) {
           try {
               await addDoc(collection(db, "messages"), {
                   name: name,
                   message: message,
+                  color: color,
                   timestamp: serverTimestamp()
               });
               console.log("Mensagem salva com sucesso!");
@@ -41,19 +42,25 @@
 
               snapshot.forEach((doc) => {
                   const entry = doc.data();
-                  addEntry(entry.name, entry.message);
+                  addEntry(entry.name, entry.message, entry.color);
               });
           });
       }
 
       // Função para adicionar uma mensagem na tela
-      function addEntry(name, message) {
+      function addEntry(name, message, color,) {
           const entryDiv = document.createElement('div');
           entryDiv.className = 'entry';
           
           const nameElement = document.createElement('b');
-          nameElement.style.color = '#139CB7ff';
-          nameElement.textContent = name + ": ";
+            nameElement.style.color = '#139CB7ff';
+            nameElement.style.color = color;
+            nameElement.textContent = name + ": ";
+
+
+
+
+          
           
           const messageElement = document.createElement('span');
           messageElement.textContent = message;
@@ -73,9 +80,10 @@
           
           const name = document.getElementById('gb-name').value;
           const message = document.getElementById('gb-message').value;
+          const color = document.getElementById('nameColor').value;
           
           if (name && message) {
-              saveEntry(name, message);
+              saveEntry(name, message, color);
               document.getElementById('guestbook-form').reset();
           }
       });
