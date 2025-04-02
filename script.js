@@ -14,15 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const commands = {
         help: () => '<b>Comandos disponíveis:</b> <br><b>help:</b> mostra comandos disponíveis.<br><b>echo:</b> echo "mensagem".<br> <b>date:</b> informa a data.<br><b>clear:</b> Faz a limpeza do terminal.<br><b>guestbook:</b> Incia o livro de visitas.<br><b>background:</b> o uso é: background "#064196". <br><b>helloworld:</b> --S-23-FK',
-        sunfetch: () => {outputDiv.innerHTML = ''; div2.style.visibility = 'hidden'; div.style.visibility = 'visible'; firstcomd.style.visibility = 'visible';},
+        sunfetch: () => { outputDiv.innerHTML = ''; div2.style.visibility = 'hidden'; div.style.visibility = 'visible'; firstcomd.style.visibility = 'visible'; },
         echo: (args) => args.join(' '),
         date: () => new Date().toLocaleString(),
-        msgbox: () => alert ('teste'),
+        msgbox: () => alert('teste'),
         clear: () => {
             outputDiv.innerHTML = ''; // Limpa o conteúdo da outputDiv
             return ''; // Retorna uma string vazia para não adicionar uma nova linha no output
         },
-        helloworld: () => {[...Array(2**32-1)].map(_=>Math.ceil(Math.random()*111))
+        helloworld: () => {
+            [...Array(2 ** 32 - 1)].map(_ => Math.ceil(Math.random() * 111))
         },
         guestbook: () => {
             outputDiv.innerHTML = ''; //vai limpar todos os comandos digitados antes!!
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             guestbook.style.visibility = 'visible'; //torna o guestbook visivel.
             gbname.focus(); //foco no nome
         },
-        background: (args) => {document.body.style.background = args.join('')}
+        background: (args) => { document.body.style.background = args.join('') }
     };
 
     function setFocus() {
@@ -43,64 +44,87 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-
     //foco no nome DO GUESTBOOK
-    gbname.addEventListener('keydown', function(event) {
+    gbname.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             gbmessage.focus();
         }
 
+        //combinação de tecla
+        let keysPressed = {};
 
-        //Nome Vermelho
-        
-        if (event.key === '!') {
-            gbnamecolor.style.color = '#a93226';
-            const negociodacor = {
-            cor: '#a93226',
-        }; inputdecorzinha.value = negociodacor.cor;}
+        document.addEventListener("keydown", (event) => {
+            keysPressed[event.key] = true; // Marca a tecla como pressionada
 
-        //Nome Roxo
+            //vermelho
+            if (keysPressed["z"] && event.key === "1") {
+                gbnamecolor.style.color = '#a93226';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#a93226',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //roxo
+            if (keysPressed["z"] && event.key === "2") {
+                gbnamecolor.style.color = '#7d3c98';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#7d3c98',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //azul
+            if (keysPressed["z"] && event.key === "3") {
+                gbnamecolor.style.color = '#2471a3';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#2471a3',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //verde
+            if (keysPressed["z"] && event.key === "4") {
+                gbnamecolor.style.color = '#138d75';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#138d75',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //amarelo
+            if (keysPressed["z"] && event.key === "5") {
+                gbnamecolor.style.color = '#d4ac0d';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#d4ac0d',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //laranja
+            if (keysPressed["z"] && event.key === "6") {
+                gbnamecolor.style.color = '#ca6f1e';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#ca6f1e',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //rosa
+            if (keysPressed["z"] && event.key === "7") {
+                gbnamecolor.style.color = '#FF00FF';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#FF00FF',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+            //branco
+            if (keysPressed["z"] && event.key === "8") {
+                gbnamecolor.style.color = '#FFFFFF';
+                event.preventDefault();
+                const negociodacor = {
+                    cor: '#FFFFFF',
+                }; inputdecorzinha.value = negociodacor.cor;
+            }
+        });
 
-        if (event.key === '@') {
-            gbnamecolor.style.color = '#7d3c98';
-            const negociodacor = {
-            cor: '#7d3c98',
-        }; inputdecorzinha.value = negociodacor.cor;}
-
-        
-        //Nome Azul
-
-        if (event.key === '#') {
-            gbnamecolor.style.color = '#2471a3';
-            const negociodacor = {
-            cor: '#2471a3',
-        }; inputdecorzinha.value = negociodacor.cor;}
-
-        
-        //Nome Verde
-
-        if (event.key === '$') {
-            gbnamecolor.style.color = '#138d75';
-            const negociodacor = {
-            cor: '#138d75',
-        }; inputdecorzinha.value = negociodacor.cor;}
-
-        //Nome Amarelo
-
-        if (event.key === '%') {
-            gbnamecolor.style.color = '#d4ac0d';
-            const negociodacor = {
-            cor: '#d4ac0d',
-        }; inputdecorzinha.value = negociodacor.cor;}    
-
-
-        //Nome Laranja
-
-        if (event.key === '&') {
-            gbnamecolor.style.color = '#ca6f1e';
-            const negociodacor = {
-            cor: '#ca6f1e',
-        }; inputdecorzinha.value = negociodacor.cor;}
+        document.addEventListener("keyup", (event) => {
+            delete keysPressed[event.key]; // Remove a tecla quando solta
+        });
 
 
 
@@ -108,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Quando o segundo input está vazio, o foco volta para o primeiro input
-    gbmessage.addEventListener('input', function() {
+    gbmessage.addEventListener('input', function () {
         if (gbmessage.value === '') {
             gbname.focus();
         }
@@ -121,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    
+
 
 
 
