@@ -17,7 +17,7 @@ body {
 
 .container {
   position: absolute;
-  background: #1f1f1f;
+  background: #1f1f1fc4;
   border-radius: 10px;
   width: 600px;
   height: 400px;
@@ -278,6 +278,7 @@ white{
   outline: none;
 }
 
+
 @media screen and (max-width: 600px){
   #gb-name {
     width: 98%;
@@ -315,4 +316,11 @@ white{
 .gb-input button {
   visibility: hidden;
   width: 0px;
+}
+
+
+#nameColor {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
 }
