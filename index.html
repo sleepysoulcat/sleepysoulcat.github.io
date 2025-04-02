@@ -127,7 +127,6 @@
            <li><b>Gender:</b> ⚧ transfem</li>
            <li><b>Sexual Orientation:</b> ⚢ lesbian</li>
            <li><b>Packages:</b> dev, pixel-art, sewing, electronics-Projects and more 55 Packages..</li>
-           <li><b>Sexual Orientation:</b> ⚢ lesbian</li>
            <li><b>Dev-languages:</b> javascript, python</li>
            <li><b>Bluesky</b><a href="https://bsky.app/profile/sleepysoulcat.art"> @sleepysoulcat.art</a></li>
            <li><b>Github:</b> <a href="https://github.com/sleepysoulcat">/sleepysoulcat</a></li>
@@ -149,15 +148,17 @@
         <div id="output" class="terminal-output"></div>
 
         <span>sleepysoulcat@index:~$</span>
-        <input autocomplete="off" maxlength="20" type="text" class="inputst" id="input" autofocus/>
+        <input autocomplete="off" type="text" class="inputst" id="input" autofocus/>
       </div>
       <div id="guestbook">
         <div id="gbcont"></div>
         <form id="guestbook-form" class="gb-input">
-        <label for="gb-name"><b>name:</b></label>
+        <label id="gbnamecolor" for="gb-name"><b>name:</b></label>
         <input autocomplete="off" maxlength="15" type="text" id="gb-name" autofocus/>
         <label for="gb-message"><b>message:</b></label>
         <input autocomplete="off" maxlength="600" type="text" id="gb-message" autofocus/>
+        <label for="nameColor"></label>
+        <input type="color" id="nameColor" value="#139CB7" />
         <button type="submit"></button>
       </form>
       </div>
